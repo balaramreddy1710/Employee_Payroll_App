@@ -1,0 +1,132 @@
+/* Base Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 1rem;
+  background-color: #f0f2f5;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 100%;
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+form#payroll-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+form#payroll-form input,
+form#payroll-form textarea,
+form#payroll-form select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+form#payroll-form textarea {
+  grid-column: span 2;
+  resize: vertical;
+  min-height: 80px;
+}
+
+form#payroll-form button {
+  grid-column: span 2;
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+form#payroll-form button:hover {
+  background-color: #0056b3;
+}
+
+input.error,
+textarea.error,
+select.error {
+  border-color: red;
+}
+
+.error-msg {
+  color: red;
+  font-size: 0.875rem;
+  margin-top: -0.25rem;
+  margin-bottom: 0.5rem;
+  grid-column: span 2;
+}
+
+.btn-con {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.btn-con .btn {
+  flex: 1;
+  min-width: 80px;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  overflow-x: auto;
+  display: block;
+  border-collapse: collapse;
+  margin-top: 2rem;
+}
+
+thead {
+  background-color: #007bff;
+  color: white;
+}
+
+th,
+td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+/* Search/Sort Section */
+.search-sort {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+@media (min-width: 600px) {
+  .search-sort {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .btn-con {
+    justify-content: flex-start;
+  }
+}
